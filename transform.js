@@ -7,12 +7,17 @@ function transform(){
     
     var copyText = transformed.join('');
     document.getElementById("return").innerHTML = copyText;
-
-    copyText.select();
-    copyText.setSelectionRange(0, 99999)
+    
+    document.getElementById("copied").innerHTML = "copied to clipboard!";
+    var temp = document.createElement("textarea");
+    document.body.appendChild(temp);
+    temp.value = copyText;
+    temp.select();
     document.execCommand("copy");
-
-    alert("Copied the text: " + copyText.value);
+    
+    var textArea = document.getElementsByTagName("textarea");
+    while(textArea.length) textArea[0].parentNode.removeChild(textArea[0]);
+    
 }
 
 document.addEventListener('DOMContentLoaded', function () {
