@@ -1,7 +1,7 @@
 {
-	"name": "Getting Started Example",
+	"name": "Capital Letter Converted",
 	"version": "1.0",
-	"description": "Build an extension!",
+	"description": "Converts strings to the spongebob meme format",
 	"browser_action": {
 		"default_icon": "logo.png",
 		"default_popup": "popup.html"
